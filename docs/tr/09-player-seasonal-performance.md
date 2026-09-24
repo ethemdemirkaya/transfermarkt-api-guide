@@ -1,5 +1,7 @@
 ## 9. Oyuncunun Sezonluk Performans Detayları
 
+> ⚠️ **Bu endpoint artık çalışmıyor.** 24.09.2026 tarihli testte `404 Not Found` döndürdü. Maç bazında performans verisi için [`13-player-match-performance.md`](13-player-match-performance.md) endpoint'ini kullanabilirsiniz.
+
 * **Açıklama:** Belirtilen oyuncu ID'sine göre, oyuncunun kariyerindeki her bir sezon ve o sezonda oynadığı her bir müsabaka için ayrı ayrı performans istatistiklerini döndürür. Yanıt, her sezon/müsabaka kombinasyonu için maç, gol, asist, kartlar ve yüzde bazlı istatistikler gibi detaylı veriler içeren bir dizi (array) olarak gelir. Bu endpoint, bir oyuncunun belirli bir sezondaki formunu analiz etmek için idealdir.
 * **Method:** `GET`
 * **Endpoint URL:** `/ceapi/player/{player_id}/performance`

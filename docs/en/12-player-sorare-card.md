@@ -1,5 +1,7 @@
 ## 12. Get a Player's Sorare Card Info
 
+> ⚠️ **This endpoint no longer works.** It returned `404 Not Found` when tested on 2026-09-24.
+
 * **Description:** Based on the given player ID, returns statistics about the player's fantasy football card via Transfermarkt's [Sorare](https://sorare.com) integration. Rather than general football statistics, this endpoint includes performance-based scores used in the Sorare game (e.g. `score_so5`), special metrics such as duels won, and the player's Sorare card image.
 * **Method:** `GET`
 * **Endpoint URL:** `/ceapi/sorare/fetchPlayersCard/{player_id}`

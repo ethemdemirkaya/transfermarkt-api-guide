@@ -88,6 +88,8 @@ The response structure of this endpoint is exactly the same as the one described
 | `time`            | `number` | **Unix timestamp** (in seconds) indicating the match kick-off time.             | `1755018000`          |
 | `link`            | `string` | Relative link to the match report page.                                         | `"/spielbericht/..."` |
 
+> **Note:** In current responses the match object also contains the `day`, `dayLink`, `group`, `injury`, `suspension`, `resultExtension` and `integrations` fields; for team crests use the `image` field of the team object. See [`06-player-previous-matches.md`](06-player-previous-matches.md) for details.
+
 ### Data Access Example (JavaScript)
 
 The following code shows how to fetch a team's previous matches.

@@ -28,11 +28,15 @@ Bu dökümantasyon, geliştiricilerin ve veri meraklılarının Transfermarkt ve
 5. [Oyuncunun Kulüplere Göre Performansı](05-player-performance-by-club.md)
 6. [Oyuncunun Son Maçlarını Listeleme](06-player-previous-matches.md)
 7. [Oyuncunun Gelecek Maçlarını Listeleme](07-player-upcoming-matches.md)
-8. Oyuncunun Detaylı Bilgilerini Getirme *(henüz dökümante edilmedi)*
+8. [Oyuncunun Detaylı Bilgileri](08-player-details.md)
 9. [Oyuncunun Sezonluk Performans Detayları](09-player-seasonal-performance.md)
 10. [Takımın Gelecek Maçlarını Listeleme](10-team-upcoming-matches.md)
 11. [Takımın Son Maçlarını Listeleme](11-team-previous-matches.md)
 12. [Oyuncunun Sorare Kart Bilgileri](12-player-sorare-card.md)
+13. [Oyuncunun Maç Bazında Performansı](13-player-match-performance.md)
+14. [Kulüp Detayları](14-club-details.md)
+
+> ⚠️ 4, 5, 9 ve 12 numaralı endpoint'ler 24.09.2026 itibarıyla `404` döndürmektedir. Performans verileri için 13 numaralı endpoint'i kullanın.
 
 ## Sorumlu Kullanım İlkeleri
 
@@ -93,7 +97,7 @@ Bir oyuncunun sıradaki maçlarını (fikstürünü) listeler.
 
 Bir veya daha fazla oyuncunun modern bir API üzerinden detaylı profil bilgilerini döndürür.
 
-> Bu endpoint'in dökümantasyonu henüz hazır değildir.
+> Detaylar için [`08-player-details.md`](08-player-details.md) dosyasına bakınız.
 
 ### 9. Oyuncunun Sezonluk Performans Detayları
 
@@ -118,6 +122,18 @@ Bir takımın oynadığı son maçları listeler.
 Bir oyuncunun [Sorare](https://sorare.com) fantazi futbol platformundaki kart bilgilerini ve özel istatistiklerini döndürür.
 
 > Detaylar için [`12-player-sorare-card.md`](12-player-sorare-card.md) dosyasına bakınız.
+
+### 13. Oyuncunun Maç Bazında Performansı
+
+Bir oyuncunun kariyerindeki her maç için dakika, gol, asist, kart, şut, pas ve ikili mücadele istatistiklerini döndürür.
+
+> Detaylar için [`13-player-match-performance.md`](13-player-match-performance.md) dosyasına bakınız.
+
+### 14. Kulüp Detaylarını Getirme
+
+Bir veya daha fazla kulübün (veya milli takımın) temel bilgilerini, kadro istatistiklerini ve piyasa değerini döndürür.
+
+> Detaylar için [`14-club-details.md`](14-club-details.md) dosyasına bakınız.
 
 ## Katkıda Bulunma
 

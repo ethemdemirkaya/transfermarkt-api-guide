@@ -89,6 +89,10 @@ The response structure of this endpoint is exactly the same as the one described
 | `link`          | `string` | Relative link to the match report page.                                              | `"/spielbericht/..."`     |
 | `group`         | `string` | Indicates which round or group the match belongs to (localized, e.g. "Play-Off turu ilk maç" = "Play-off round, first leg"). | `"Play-Off turu ilk maç"` |
 
+> **Note:** In current responses the match object also contains the `day`, `dayLink`, `group`, `injury`, `suspension`, `resultExtension` and `integrations` fields; for team crests use the `image` field of the team object. See [`06-player-previous-matches.md`](06-player-previous-matches.md) for details.
+
+> **Note:** The list may include a match that was played and finished on the same day, with `state: "Played"` and its real score. If you only want upcoming matches, filter with `state === "Fixture"`.
+
 ### Data Access Example (JavaScript)
 
 The following code shows how to fetch a team's fixtures.

@@ -28,11 +28,15 @@ This documentation was created **for educational and research purposes** to help
 5. [Player Performance by Club](05-player-performance-by-club.md)
 6. [Player's Previous Matches](06-player-previous-matches.md)
 7. [Player's Upcoming Matches](07-player-upcoming-matches.md)
-8. Player Details *(not yet documented)*
+8. [Player Details](08-player-details.md)
 9. [Player Seasonal Performance Details](09-player-seasonal-performance.md)
 10. [Team's Upcoming Matches](10-team-upcoming-matches.md)
 11. [Team's Previous Matches](11-team-previous-matches.md)
 12. [Player's Sorare Card Info](12-player-sorare-card.md)
+13. [Player Performance per Match](13-player-match-performance.md)
+14. [Club Details](14-club-details.md)
+
+> ⚠️ Endpoints 4, 5, 9 and 12 return `404` as of 2026-09-24. Use endpoint 13 for performance data.
 
 ## Responsible Usage Principles
 
@@ -93,7 +97,7 @@ Lists a player's upcoming matches (fixtures).
 
 Returns detailed profile information for one or more players via a modern API.
 
-> Documentation for this endpoint is not yet available.
+> See [`08-player-details.md`](08-player-details.md) for details.
 
 ### 9. Player Seasonal Performance Details
 
@@ -118,6 +122,18 @@ Lists the most recent matches a team has played.
 Returns a player's card information and special statistics on the [Sorare](https://sorare.com) fantasy football platform.
 
 > See [`12-player-sorare-card.md`](12-player-sorare-card.md) for details.
+
+### 13. Player Performance per Match
+
+Returns minutes, goals, assists, cards, shots, passes and duel statistics for every match of a player's career.
+
+> See [`13-player-match-performance.md`](13-player-match-performance.md) for details.
+
+### 14. Get Club Details
+
+Returns basic information, squad statistics and market value for one or more clubs (or national teams).
+
+> See [`14-club-details.md`](14-club-details.md) for details.
 
 ## Contributing
 

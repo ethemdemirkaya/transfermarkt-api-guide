@@ -108,6 +108,7 @@ This object holds information about all teams appearing in the match list. The o
 | `link`                | `string`  | Relative link to the team's profile page.                                                 | `"/fenerbahce-istanbul/..."` |
 | `image1x` / `image2x` | `string`  | URLs of the team logo in different resolutions.                                           | `"https://.../36.png"`       |
 | `isNT`                | `boolean` | Indicates whether the team is a national team (`National Team`). `true` means it is.      | `false`                      |
+| `image`               | `string`  | Full URL of the team crest (the flag for national teams). In current responses `image1x` / `image2x` are `null`, so use this field instead. | `"https://img.a.transfermarkt.technology/..."` |
 
 ---
 
@@ -115,9 +116,10 @@ This object holds information about all teams appearing in the match list. The o
 
 | Field         | Type     | Description                                                          |
 |:------------- |:-------- |:-------------------------------------------------------------------- |
-| `competition` | `object` | Information about the competition the match was played in (`id`, `label`, `link`). |
+| `competition` | `object` | Information about the competition the match was played in (`id`, `label`, `link`). `link` is a full URL. |
 | `id`          | `number` | The unique Transfermarkt ID of the match report.                     |
 | `match`       | `object` | The actual object containing the match details.                      |
+| `integrations` | `array` | External integration data. Returned as an empty array (`[]`) in the responses examined. |
 
 ---
 
@@ -128,9 +130,15 @@ This object holds information about all teams appearing in the match list. The o
 | `home`   | `number` | ID of the home team. This ID is used to look up the team name in the `teams` object.                                | `36`                  |
 | `away`   | `number` | ID of the away team.                                                                                                | `234`                 |
 | `result` | `string` | The match score. May be "-:-" for matches not yet played.                                                           | `"5:2"`               |
-| `state`  | `string` | The match state. Can take values such as `Played`, `Postponed`, `Scheduled`.                                        | `"Played"`            |
+| `state`  | `string` | The match state. Can take values such as `Played`, `Postponed`, `Fixture` (scheduled).                                        | `"Played"`            |
 | `time`   | `number` | **Unix timestamp** (in seconds) indicating the match kick-off time. It needs to be converted to a readable date.    | `1755018000`          |
 | `link`   | `string` | Relative link to the match's detailed report page.                                                                  | `"/spielbericht/..."` |
+| `resultExtension` | `string` | Additional score info, e.g. `"PEN"` (decided on penalties). Empty string if none. | `"PEN"` |
+| `day`    | `string` | Matchday / round number. | `"7"` |
+| `dayLink` | `string` | Relative link to that matchday's fixtures page. | `"/wettbewerb/spieltag/..."` |
+| `group`  | `string` | Group or round name (localized, e.g. `"Grup 2"`). `null` if none. | `"Grup 2"` |
+| `injury` | `object` | Injury info (`reason`, `link`) if the player missed the match due to injury. Otherwise `null`. | `{ "reason": "Uyluk sakatlığı" }` |
+| `suspension` | `object` | Suspension info if the player missed the match due to a suspension. Otherwise `null`. | `null` |
 
 ### Data Access Example (JavaScript)
 

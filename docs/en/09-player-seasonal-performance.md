@@ -1,5 +1,7 @@
 ## 9. Player Seasonal Performance Details
 
+> ⚠️ **This endpoint no longer works.** It returned `404 Not Found` when tested on 2026-09-24. For per-match performance data, use the [`13-player-match-performance.md`](13-player-match-performance.md) endpoint.
+
 * **Description:** Based on the given player ID, returns separate performance statistics for each season of the player's career and each competition played in that season. The response is an array with detailed data for each season/competition combination, such as matches, goals, assists, cards and percentage-based statistics. This endpoint is ideal for analysing a player's form in a specific season.
 * **Method:** `GET`
 * **Endpoint URL:** `/ceapi/player/{player_id}/performance`

@@ -89,6 +89,10 @@ Bu endpoint'in yanıt yapısı, [`07-player-upcoming-matches.md`](07-player-upco
 | `link`          | `string` | Maçın rapor sayfasına giden göreceli link.                                          | `"/spielbericht/..."`     |
 | `group`         | `string` | Maçın hangi turda veya grupta olduğunu belirtir. (örn: "Play-Off turu ilk maç")     | `"Play-Off turu ilk maç"` |
 
+> **Not:** Güncel yanıtlarda maç objesi `day`, `dayLink`, `group`, `injury`, `suspension`, `resultExtension` ve `integrations` alanlarını da içerir; takım objesinde logo için `image` alanı kullanılır. Detaylar için [`06-player-previous-matches.md`](06-player-previous-matches.md) dökümanına bakınız.
+
+> **Not:** Liste, aynı gün oynanmış ve tamamlanmış bir maçı `state: "Played"` ve gerçek skoruyla içerebilir. Sadece gelecek maçları istiyorsanız `state === "Fixture"` ile filtreleyin.
+
 ### Veriye Erişim Örneği (JavaScript)
 
 Aşağıdaki kod, bir takımın fikstürünü nasıl alacağınızı gösterir.

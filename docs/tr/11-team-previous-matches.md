@@ -88,6 +88,8 @@ Bu endpoint'in yanıt yapısı, [`10-team-upcoming-matches.md`](10-team-upcoming
 | `time`            | `number` | Maçın başlangıç zamanını belirten **Unix timestamp** (saniye cinsinden).          | `1755018000`          |
 | `link`            | `string` | Maçın rapor sayfasına giden göreceli link.                                        | `"/spielbericht/..."` |
 
+> **Not:** Güncel yanıtlarda maç objesi `day`, `dayLink`, `group`, `injury`, `suspension`, `resultExtension` ve `integrations` alanlarını da içerir; takım objesinde logo için `image` alanı kullanılır. Detaylar için [`06-player-previous-matches.md`](06-player-previous-matches.md) dökümanına bakınız.
+
 ### Veriye Erişim Örneği (JavaScript)
 
 Aşağıdaki kod, bir takımın son maçlarını nasıl alacağınızı gösterir.

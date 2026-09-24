@@ -108,6 +108,7 @@ Bu obje, maç listesinde geçen tüm takımların bilgilerini barındırır. Obj
 | `link`                | `string`  | Takımın profil sayfasına giden göreceli link.                                                  | `"/fenerbahce-istanbul/..."` |
 | `image1x` / `image2x` | `string`  | Takım logosunun farklı çözünürlükteki URL'leri.                                                | `"https://.../36.png"`       |
 | `isNT`                | `boolean` | Takımın bir milli takım (`National Team`) olup olmadığını belirtir. `true` ise milli takımdır. | `false`                      |
+| `image`               | `string`  | Takım logosunun (milli takımlarda bayrağın) tam URL'si. Güncel yanıtlarda `image1x` / `image2x` `null` gelir, bunun yerine bu alan kullanılmalıdır. | `"https://img.a.transfermarkt.technology/..."` |
 
 ---
 
@@ -115,9 +116,10 @@ Bu obje, maç listesinde geçen tüm takımların bilgilerini barındırır. Obj
 
 | Değişken Adı  | Tip      | Açıklama                                                       |
 |:------------- |:-------- |:-------------------------------------------------------------- |
-| `competition` | `object` | Maçın oynandığı müsabakanın bilgileri (`id`, `label`, `link`). |
+| `competition` | `object` | Maçın oynandığı müsabakanın bilgileri (`id`, `label`, `link`). `link` tam URL'dir. |
 | `id`          | `number` | Maç raporunun benzersiz Transfermarkt ID'si.                   |
 | `match`       | `object` | Maçın detaylarını içeren asıl obje.                            |
+| `integrations`| `array`  | Harici entegrasyon bilgileri. İncelenen yanıtlarda boş dizi (`[]`) olarak geldi. |
 
 ---
 
@@ -128,9 +130,15 @@ Bu obje, maç listesinde geçen tüm takımların bilgilerini barındırır. Obj
 | `home`       | `number` | Ev sahibi takımın ID'si. Bu ID, `teams` objesinden takım adını bulmak için kullanılır.                                   | `36`                  |
 | `away`       | `number` | Deplasman takımının ID'si.                                                                                               | `234`                 |
 | `result`     | `string` | Maçın skoru. Oynanmamış maçlar için "-:-" olabilir.                                                                      | `"5:2"`               |
-| `state`      | `string` | Maçın durumu. `Played` (Oynandı), `Postponed` (Ertelendi), `Scheduled` (Planlandı) gibi değerler alabilir.               | `"Played"`            |
+| `state`      | `string` | Maçın durumu. `Played` (Oynandı), `Postponed` (Ertelendi), `Fixture` (Planlandı) gibi değerler alabilir.               | `"Played"`            |
 | `time`       | `number` | Maçın başlangıç zamanını belirten **Unix timestamp** (saniye cinsinden). Bunu okunabilir bir tarihe dönüştürmek gerekir. | `1755018000`          |
 | `link`       | `string` | Maçın detaylı rapor sayfasına giden göreceli link.                                                                       | `"/spielbericht/..."` |
+| `resultExtension` | `string` | Skorla ilgili ek bilgi, örn. `"PEN"` (penaltılarla bitti). Yoksa boş string. | `"PEN"` |
+| `day`        | `string` | Lig haftası / tur numarası. | `"7"` |
+| `dayLink`    | `string` | O haftanın fikstür sayfasına giden göreceli link. | `"/wettbewerb/spieltag/..."` |
+| `group`      | `string` | Grup veya tur adı (örn. `"Grup 2"`). Yoksa `null`. | `"Grup 2"` |
+| `injury`     | `object` | Oyuncu o maçı sakatlık nedeniyle kaçırdıysa sakatlık bilgisi (`reason`, `link`). Yoksa `null`. | `{ "reason": "Uyluk sakatlığı" }` |
+| `suspension` | `object` | Oyuncu o maçı cezalı olduğu için kaçırdıysa ceza bilgisi. Yoksa `null`. | `null` |
 
 ### Veriye Erişim Örneği (JavaScript)
 

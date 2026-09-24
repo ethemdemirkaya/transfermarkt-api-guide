@@ -53,6 +53,9 @@ plugins:
             Kulüplere Göre Performans: Performance by Club
             Sezonluk Performans: Seasonal Performance
             Sorare Kartı: Sorare Card
+            Oyuncu Detayları: Player Details
+            Maç Bazında Performans: Performance per Match
+            Kulüp Detayları: Club Details
 
 nav:
   - Ana Sayfa: index.md
@@ -62,7 +65,10 @@ nav:
       - Kadro: 03-team-squad.md
       - Gelecek Maçlar: 10-team-upcoming-matches.md
       - Son Maçlar: 11-team-previous-matches.md
+      - Kulüp Detayları: 14-club-details.md
   - Oyuncu:
+      - Oyuncu Detayları: 08-player-details.md
+      - Maç Bazında Performans: 13-player-match-performance.md
       - Müsabakalara Göre Performans: 04-player-performance-by-competition.md
       - Kulüplere Göre Performans: 05-player-performance-by-club.md
       - Son Maçlar: 06-player-previous-matches.md

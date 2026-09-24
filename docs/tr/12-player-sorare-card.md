@@ -1,5 +1,7 @@
     ## 12. Oyuncunun Sorare Kart Bilgilerini Getirme
 
+> ⚠️ **Bu endpoint artık çalışmıyor.** 24.09.2026 tarihli testte `404 Not Found` döndürdü.
+
 * **Açıklama:** Belirtilen oyuncu ID'sine göre, Transfermarkt'ın [Sorare](https://sorare.com) entegrasyonu aracılığıyla oyuncunun fantazi futbol kartı ile ilgili istatistiklerini döndürür. Bu endpoint, genel futbol istatistiklerinden ziyade, Sorare oyununda kullanılan performansa dayalı puanları (örn: `score_so5`), ikili mücadele kazanma gibi özel metrikleri ve oyuncunun Sorare kart görselini içerir.
 * **Method:** `GET`
 * **Endpoint URL:** `/ceapi/sorare/fetchPlayersCard/{player_id}`

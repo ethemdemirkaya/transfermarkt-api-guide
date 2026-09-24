@@ -94,6 +94,10 @@ Contains team information (`name`, `link`, `isNT`, etc.) keyed by team ID. This 
 | `time`          | `number` | **Unix timestamp** (in seconds) indicating the match kick-off time.                  | `1755369000`          |
 | `link`          | `string` | Relative link to the match report page.                                              | `"/spielbericht/..."` |
 
+> **Note:** In current responses the match object also contains the `day`, `dayLink`, `group`, `injury`, `suspension`, `resultExtension` and `integrations` fields; for team crests use the `image` field of the team object. See [`06-player-previous-matches.md`](06-player-previous-matches.md) for details.
+
+> **Note:** The list may include a match that was played and finished on the same day, with `state: "Played"` and its real score. If you only want upcoming matches, filter with `state === "Fixture"`.
+
 ### Data Access Example (JavaScript)
 
 The following code shows how to fetch the upcoming matches list and print team names using the `teams` object.

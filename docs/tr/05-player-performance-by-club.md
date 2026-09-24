@@ -1,5 +1,7 @@
 ## 5. Oyuncunun Kulüplere Göre Performansı
 
+> ⚠️ **Bu endpoint artık çalışmıyor.** 24.09.2026 tarihli testte `404 Not Found` döndürdü. Maç bazında performans verisi için [`13-player-match-performance.md`](13-player-match-performance.md) endpoint'ini kullanabilirsiniz.
+
 * **Açıklama:** Belirtilen oyuncu ID'sine göre, oyuncunun kariyeri boyunca oynadığı tüm kulüplerdeki toplam performans istatistiklerini (maç, gol, asist vb.) döndürür. Veriler, her bir kulüp için ayrı gruplandırılmıştır.
 * **Method:** `GET`
 * **Endpoint URL:** `/ceapi/player/{player_id}/performance`

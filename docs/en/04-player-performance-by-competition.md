@@ -1,5 +1,7 @@
 ## 4. Player Performance by Competition
 
+> ⚠️ **This endpoint no longer works.** It returned `404 Not Found` when tested on 2026-09-24. For per-match performance data, use the [`13-player-match-performance.md`](13-player-match-performance.md) endpoint.
+
 * **Description:** Based on the given player ID, returns the player's aggregated performance statistics (matches, goals, assists, etc.) across all official competitions played during their career. The data is grouped separately for each competition.
 * **Method:** `GET`
 * **Endpoint URL:** `/ceapi/player/{player_id}/performancepercompetition`

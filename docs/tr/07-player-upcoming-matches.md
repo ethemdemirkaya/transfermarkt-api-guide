@@ -67,7 +67,7 @@ Endpoint, başarılı bir istek sonucunda `teams` ve `matches` anahtarlarına sa
 
 ### Yanıt Verisi Açıklaması
 
-Bu endpoint'in yanıt yapısı, `06-oyuncu-son-maclari-listeleme.md` dökümanında açıklanan yapı ile tamamen aynıdır. Tek fark `match` objesi içindeki `state` ve `result` alanlarının değerleridir.
+Bu endpoint'in yanıt yapısı, [`06-player-previous-matches.md`](06-player-previous-matches.md) dökümanında açıklanan yapı ile tamamen aynıdır. Tek fark `match` objesi içindeki `state` ve `result` alanlarının değerleridir.
 
 #### Ana Obje Yapısı
 

@@ -67,7 +67,7 @@ Endpoint, başarılı bir istek sonucunda `teams` ve `matches` anahtarlarına sa
 
 ### Yanıt Verisi Açıklaması
 
-Bu endpoint'in yanıt yapısı, `07-oyuncu-gelecek-maclari-listeleme.md` dökümanında açıklanan yapı ile tamamen aynıdır.
+Bu endpoint'in yanıt yapısı, [`07-player-upcoming-matches.md`](07-player-upcoming-matches.md) dökümanında açıklanan yapı ile tamamen aynıdır.
 
 #### Ana Obje Yapısı
 

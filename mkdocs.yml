@@ -1,0 +1,80 @@
+site_name: Transfermarkt API Guide
+site_description: Unofficial documentation of Transfermarkt's private API endpoints
+site_url: https://ethemdemirkaya.github.io/transfermarkt-api-guide/
+repo_url: https://github.com/ethemdemirkaya/transfermarkt-api-guide
+repo_name: ethemdemirkaya/transfermarkt-api-guide
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      languages:
+        - locale: tr
+          name: Türkçe
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: Transfermarkt API Guide
+          nav_translations:
+            Ana Sayfa: Home
+            Takım: Team
+            Oyuncu: Player
+            Lige Göre Takım Listesi: Teams by League
+            Son Maç Dizilişi: Last Match Lineup
+            Kadro: Squad
+            Gelecek Maçlar: Upcoming Matches
+            Son Maçlar: Previous Matches
+            Müsabakalara Göre Performans: Performance by Competition
+            Kulüplere Göre Performans: Performance by Club
+            Sezonluk Performans: Seasonal Performance
+            Sorare Kartı: Sorare Card
+
+nav:
+  - Ana Sayfa: index.md
+  - Takım:
+      - Lige Göre Takım Listesi: 01-teams-by-league.md
+      - Son Maç Dizilişi: 02-team-last-match-lineup.md
+      - Kadro: 03-team-squad.md
+      - Gelecek Maçlar: 10-team-upcoming-matches.md
+      - Son Maçlar: 11-team-previous-matches.md
+  - Oyuncu:
+      - Müsabakalara Göre Performans: 04-player-performance-by-competition.md
+      - Kulüplere Göre Performans: 05-player-performance-by-club.md
+      - Son Maçlar: 06-player-previous-matches.md
+      - Gelecek Maçlar: 07-player-upcoming-matches.md
+      - Sezonluk Performans: 09-player-seasonal-performance.md
+      - Sorare Kartı: 12-player-sorare-card.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences

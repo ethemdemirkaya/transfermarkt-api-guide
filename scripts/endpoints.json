@@ -1,0 +1,12 @@
+[
+  { "doc": "01-teams-by-league.md", "url": "https://www.transfermarkt.com.tr/quickselect/teams/TR1" },
+  { "doc": "02-team-last-match-lineup.md", "url": "https://www.transfermarkt.com.tr/ceapi/FinalFormation/ClubId/36" },
+  { "doc": "03-team-squad.md", "url": "https://www.transfermarkt.com.tr/quickselect/players/36" },
+  { "doc": "04-player-performance-by-competition.md", "url": "https://www.transfermarkt.com.tr/ceapi/player/433049/performancepercompetition" },
+  { "doc": "05-player-performance-by-club.md", "url": "https://www.transfermarkt.com.tr/ceapi/player/433049/performance" },
+  { "doc": "06-player-previous-matches.md", "url": "https://www.transfermarkt.com.tr/ceapi/previousMatches/player/433049?limit=5" },
+  { "doc": "07-player-upcoming-matches.md", "url": "https://www.transfermarkt.com.tr/ceapi/nextMatches/player/433049?limit=5" },
+  { "doc": "10-team-upcoming-matches.md", "url": "https://www.transfermarkt.com.tr/ceapi/nextMatches/team/36?limit=5" },
+  { "doc": "11-team-previous-matches.md", "url": "https://www.transfermarkt.com.tr/ceapi/previousMatches/team/36?limit=5" },
+  { "doc": "12-player-sorare-card.md", "url": "https://www.transfermarkt.com.tr/ceapi/sorare/fetchPlayersCard/396638" }
+]

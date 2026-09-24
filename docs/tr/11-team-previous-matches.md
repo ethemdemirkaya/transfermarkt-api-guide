@@ -66,7 +66,7 @@ Endpoint, başarılı bir istek sonucunda `teams` ve `matches` anahtarlarına sa
 
 ### Yanıt Verisi Açıklaması
 
-Bu endpoint'in yanıt yapısı, `10-takim-gelecek-maclari-listeleme.md` dökümanında açıklanan yapı ile tamamen aynıdır. Tek fark `match` objesi içindeki `state` ve `result` alanlarının değerleridir.
+Bu endpoint'in yanıt yapısı, [`10-team-upcoming-matches.md`](10-team-upcoming-matches.md) dökümanında açıklanan yapı ile tamamen aynıdır. Tek fark `match` objesi içindeki `state` ve `result` alanlarının değerleridir.
 
 #### Ana Obje Yapısı
 

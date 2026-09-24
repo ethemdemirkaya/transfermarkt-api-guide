@@ -19,9 +19,11 @@
 
 ## Endpoint Sağlık Kontrolü / Endpoint Health Check
 
-Dökümante edilen endpoint'ler her pazartesi [GitHub Actions](.github/workflows/health-check.yml) ile otomatik test edilir. Yukarıdaki rozet kırmızıysa en az bir endpoint yanıt vermiyordur; hangisinin bozulduğunu son çalıştırmanın özetinde görebilirsiniz. Test edilen URL'ler [scripts/endpoints.json](scripts/endpoints.json) dosyasındadır.
+Dökümante edilen endpoint'ler her pazartesi [GitHub Actions](.github/workflows/health-check.yml) ile otomatik test edilir. Yukarıdaki rozet kırmızıysa en az bir endpoint bozuktur (404, 5xx veya geçersiz JSON); hangisinin bozulduğunu son çalıştırmanın özetinde görebilirsiniz. Test edilen URL'ler [scripts/endpoints.json](scripts/endpoints.json) dosyasındadır; `"deprecated": true` olanlar test edilmez.
 
-Documented endpoints are tested automatically every Monday via GitHub Actions. A red badge means at least one endpoint is failing; the latest run's summary shows which one.
+> 🛡️ `www.transfermarkt.com.tr` bot koruması, GitHub sunucularından gelen istekleri engelleyebilir (`202`). Bu durumdaki endpoint'ler **blocked** olarak raporlanır ve rozeti kırmızıya çevirmez; gerçek durumlarını görmek için script'i yerelde çalıştırın.
+
+Documented endpoints are tested automatically every Monday via GitHub Actions. A red badge means at least one endpoint is broken (404, 5xx or invalid JSON). Endpoints blocked by Transfermarkt's bot protection on GitHub's runners are reported as *blocked* without failing the run; run the script locally to verify them.
 
 ```bash
 python scripts/health_check.py
